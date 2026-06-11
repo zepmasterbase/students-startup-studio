@@ -4,324 +4,371 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | Student Startup Studio</title>
+<title>About Student Startup Studio | Helping Entrepreneurs Launch With Confidence</title>
 
 <meta name="description" content="Learn about Student Startup Studio and founder Pericles. Helping aspiring entrepreneurs turn ideas into real businesses through strategy, execution, and digital presence.">
 
-<meta name="keywords" content="startup consulting, entrepreneur coaching, startup studio, business mentor, startup strategy, founder coaching">
+<meta name="keywords" content="startup consulting, entrepreneur coaching, startup mentor, founder coaching, business strategy, startup studio">
 
 <meta name="author" content="Student Startup Studio">
 
 <style>
 :root{
-    --gold:#D4AF37;
-    --gold-dark:#B89427;
-    --black:#111111;
-    --white:#ffffff;
-    --gray:#f8f8f8;
-    --text:#555555;
-    --shadow:0 12px 35px rgba(0,0,0,.08);
-    --radius:20px;
-    --transition:all .3s ease;
+--gold:#D4AF37;
+--gold-dark:#B89427;
+--black:#111111;
+--white:#ffffff;
+--gray:#f8f8f8;
+--text:#555555;
+--shadow:0 15px 40px rgba(0,0,0,.08);
+--radius:24px;
+--transition:all .3s ease;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Inter,Segoe UI,Arial,sans-serif;
-    color:var(--black);
-    background:var(--white);
-    line-height:1.7;
+font-family:Inter,Segoe UI,Arial,sans-serif;
+background:#fff;
+color:#111;
+line-height:1.7;
 }
 
 a{
-    text-decoration:none;
+text-decoration:none;
 }
 
 img{
-    max-width:100%;
-    display:block;
+max-width:100%;
+display:block;
 }
 
 .container{
-    width:min(1200px,92%);
-    margin:auto;
+width:min(1200px,92%);
+margin:auto;
 }
 
 section{
-    padding:90px 0;
+padding:90px 0;
+}
+
+h1,h2,h3{
+line-height:1.2;
 }
 
 .section-title{
-    text-align:center;
-    font-size:clamp(2rem,4vw,3.2rem);
-    margin-bottom:15px;
+text-align:center;
+font-size:clamp(2rem,4vw,3.5rem);
+margin-bottom:15px;
 }
 
 .section-subtitle{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 60px;
-    color:var(--text);
+text-align:center;
+max-width:750px;
+margin:0 auto 60px;
+color:var(--text);
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 30px;
-    border-radius:50px;
-    font-weight:700;
-    transition:var(--transition);
+display:inline-block;
+padding:15px 30px;
+border-radius:999px;
+font-weight:700;
+transition:var(--transition);
 }
 
 .btn-primary{
-    background:var(--gold);
-    color:#111;
+background:var(--gold);
+color:#111;
 }
 
 .btn-primary:hover{
-    background:var(--gold-dark);
-    transform:translateY(-3px);
+background:var(--gold-dark);
+transform:translateY(-3px);
 }
 
 .btn-outline{
-    border:2px solid #111;
-    color:#111;
+border:2px solid #111;
+color:#111;
 }
 
 .btn-outline:hover{
-    background:#111;
-    color:#fff;
+background:#111;
+color:#fff;
 }
 
 header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #eee;
+z-index:999;
 }
 
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
 }
 
 .logo{
-    font-size:1.2rem;
-    font-weight:800;
-    color:#111;
+font-size:1.2rem;
+font-weight:800;
+color:#111;
 }
 
 .nav-links{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
+display:flex;
+gap:25px;
+align-items:center;
+flex-wrap:wrap;
 }
 
 .nav-links a{
-    color:#111;
-    font-weight:500;
+color:#111;
+font-weight:600;
 }
 
 .hero{
-    background:linear-gradient(to bottom,#fff,#fafafa);
-    text-align:center;
-    padding:120px 0;
+background:linear-gradient(to bottom,#fff,#fafafa);
+padding:120px 0;
+text-align:center;
 }
 
 .hero h1{
-    font-size:clamp(2.8rem,6vw,5rem);
-    margin-bottom:20px;
+font-size:clamp(3rem,6vw,5rem);
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:800px;
-    margin:auto;
-    color:var(--text);
-    font-size:1.15rem;
+max-width:800px;
+margin:auto;
+font-size:1.15rem;
+color:var(--text);
 }
 
 .hero-buttons{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .grid{
-    display:grid;
-    gap:25px;
+display:grid;
+gap:25px;
 }
 
 .four-grid{
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
 
 .card{
-    background:#fff;
-    padding:30px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    transition:var(--transition);
+background:#fff;
+padding:30px;
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+transition:var(--transition);
 }
 
 .card:hover{
-    transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
 .icon{
-    width:60px;
-    height:60px;
-    background:#fff7da;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:20px;
-    font-size:1.4rem;
-    font-weight:bold;
-    color:var(--gold);
+width:60px;
+height:60px;
+border-radius:18px;
+background:#fff8dc;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.5rem;
+margin-bottom:20px;
 }
 
 .founder{
-    display:grid;
-    grid-template-columns:1fr 1.4fr;
-    gap:50px;
-    align-items:center;
+display:grid;
+grid-template-columns:380px 1fr;
+gap:60px;
+align-items:center;
 }
 
-.founder-image{
-    height:450px;
-    border-radius:30px;
-    background:linear-gradient(135deg,#111,#333);
-    box-shadow:var(--shadow);
+.founder img{
+border-radius:30px;
+box-shadow:var(--shadow);
+width:100%;
 }
 
-.founder-content h2{
-    margin-bottom:20px;
-    font-size:2.4rem;
+.founder h2{
+font-size:2.5rem;
+margin-bottom:20px;
 }
 
-.founder-content p{
-    color:var(--text);
-    margin-bottom:20px;
+.founder p{
+margin-bottom:15px;
+color:var(--text);
 }
 
-.values,
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
 .audience{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
 }
 
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    text-align:center;
-}
-
-.stat{
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-}
-
-.stat h3{
-    color:var(--gold);
-    font-size:3rem;
-    margin-bottom:10px;
+.audience div{
+background:#fff;
+padding:25px;
+text-align:center;
+font-weight:700;
+border-radius:20px;
+box-shadow:var(--shadow);
 }
 
 .benefits{
-    max-width:900px;
-    margin:auto;
+max-width:850px;
+margin:auto;
 }
 
 .benefits ul{
-    list-style:none;
+list-style:none;
 }
 
 .benefits li{
-    padding:15px 0;
-    border-bottom:1px solid #eee;
+padding:15px 0;
+border-bottom:1px solid #eee;
 }
 
-.dark-section{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    border-radius:35px;
-    padding:80px 40px;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
-.dark-section p{
-    max-width:700px;
-    margin:15px auto 30px;
-    color:#ddd;
+.stat{
+background:#fff;
+padding:35px;
+text-align:center;
+border-radius:20px;
+box-shadow:var(--shadow);
+}
+
+.stat h3{
+font-size:3rem;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.cta{
+background:#111;
+color:#fff;
+padding:80px 40px;
+text-align:center;
+border-radius:35px;
+}
+
+.cta p{
+max-width:700px;
+margin:15px auto 30px;
+color:#ddd;
 }
 
 footer{
-    background:#0c0c0c;
-    color:#fff;
-    padding:50px 0;
+background:#111;
+color:#fff;
+padding:50px 0;
 }
 
 .footer-content{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:25px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:25px;
 }
 
 .footer-links{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .footer-links a{
-    color:#ddd;
+color:#ddd;
+}
+
+.sticky-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+display:flex;
+z-index:1000;
+box-shadow:0 -5px 20px rgba(0,0,0,.1);
+}
+
+.sticky-bar a{
+flex:1;
+padding:16px;
+text-align:center;
+font-weight:700;
+}
+
+.book-mobile{
+background:var(--gold);
+color:#111;
+}
+
+.whatsapp-mobile{
+background:#111;
+color:#fff;
+}
+
+@media(min-width:769px){
+.sticky-bar{
+display:none;
+}
 }
 
 @media(max-width:768px){
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
+.navbar{
+flex-direction:column;
+gap:15px;
+}
 
-    .founder{
-        grid-template-columns:1fr;
-    }
+.founder{
+grid-template-columns:1fr;
+}
 
-    .hero{
-        padding:90px 0;
-    }
-
-    .founder-image{
-        height:350px;
-    }
+.hero{
+padding:90px 0;
+}
 }
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="container">
+
 <nav class="navbar">
 
 <a href="index.html" class="logo">
@@ -330,20 +377,18 @@ Student Startup Studio
 
 <div class="nav-links">
 <a href="index.html">Home</a>
-<a href="services-packages.html">Services</a>
+<a href="services.html">Services</a>
 <a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="book.html" class="btn btn-primary">Book Session</a>
 </div>
 
-<a href="book.html" class="btn btn-primary">
-Book Session
-</a>
-
 </nav>
+
 </div>
 </header>
 
 <section class="hero">
+
 <div class="container">
 
 <h1>Helping Entrepreneurs Turn Ideas Into Real Businesses</h1>
@@ -354,13 +399,15 @@ Student Startup Studio helps aspiring entrepreneurs move from uncertainty to exe
 
 <div class="hero-buttons">
 <a href="book.html" class="btn btn-primary">Book a Startup Session</a>
-<a href="services-packages.html" class="btn btn-outline">View Services</a>
+<a href="services.html" class="btn btn-outline">View Services</a>
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
 <h2 class="section-title">Why Student Startup Studio Exists</h2>
@@ -370,9 +417,11 @@ Many aspiring entrepreneurs have great ideas but struggle with where to start. S
 </p>
 
 </div>
+
 </section>
 
 <section style="background:#fafafa;">
+
 <div class="container">
 
 <h2 class="section-title">What We Help You Achieve</h2>
@@ -380,44 +429,44 @@ Many aspiring entrepreneurs have great ideas but struggle with where to start. S
 <div class="grid four-grid">
 
 <div class="card">
-<div class="icon">✓</div>
+<div class="icon">💡</div>
 <h3>Validate Your Idea</h3>
-<p>Discover whether your business idea solves a real problem and has genuine market potential.</p>
+<p>Discover whether your idea solves a real problem and has market demand.</p>
 </div>
 
 <div class="card">
-<div class="icon">✓</div>
+<div class="icon">🎯</div>
 <h3>Build Your Strategy</h3>
-<p>Create a clear business model, pricing strategy, and launch plan.</p>
+<p>Create a clear business model, launch plan, and pricing strategy.</p>
 </div>
 
 <div class="card">
-<div class="icon">✓</div>
-<h3>Create Your Digital Presence</h3>
-<p>Launch a professional website, business email, and credible online brand.</p>
+<div class="icon">💻</div>
+<h3>Create Your Presence</h3>
+<p>Launch a professional website, business email, and online brand.</p>
 </div>
 
 <div class="card">
-<div class="icon">✓</div>
-<h3>Acquire Customers</h3>
+<div class="icon">🚀</div>
+<h3>Get Customers</h3>
 <p>Learn how to attract customers and generate early revenue.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
 <div class="founder">
 
-<div class="founder-image">
-<!-- Replace with founder image -->
-</div>
+<img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jjume32e1ns3ael10lkpd4106p15.jpeg" alt="Pericles - Founder Student Startup Studio">
 
-<div class="founder-content">
+<div>
 
 <h2>Meet Pericles</h2>
 
@@ -426,7 +475,11 @@ Founder of Student Startup Studio and Zep Swipe.
 </p>
 
 <p>
-Pericles works with aspiring entrepreneurs, students, graduates, side hustlers, and first-time founders to transform ideas into businesses through clarity, strategy, execution, and growth.
+Pericles works with students, graduates, side hustlers, and first-time founders to transform ideas into businesses through clarity, strategy, execution, and growth.
+</p>
+
+<p>
+His mission is simple: help entrepreneurs avoid costly mistakes, move faster, and build businesses with confidence.
 </p>
 
 <p>
@@ -435,7 +488,7 @@ Student Startup Studio was built on the belief that entrepreneurship should be a
 
 <div style="display:flex;gap:15px;flex-wrap:wrap;margin-top:25px;">
 <a href="book.html" class="btn btn-primary">Book Session</a>
-<a href="#" class="btn btn-outline">LinkedIn</a>
+<a href="https://www.linkedin.com" class="btn btn-outline">LinkedIn</a>
 </div>
 
 </div>
@@ -443,9 +496,11 @@ Student Startup Studio was built on the belief that entrepreneurship should be a
 </div>
 
 </div>
+
 </section>
 
 <section style="background:#fafafa;">
+
 <div class="container">
 
 <h2 class="section-title">Our Values</h2>
@@ -459,44 +514,48 @@ Student Startup Studio was built on the belief that entrepreneurship should be a
 
 <div class="card">
 <h3>Practical Guidance</h3>
-<p>Real-world startup advice that can be applied immediately.</p>
+<p>Real-world startup advice that can be implemented immediately.</p>
 </div>
 
 <div class="card">
 <h3>Founder Focused</h3>
-<p>Every recommendation is designed around your goals and vision.</p>
+<p>Every recommendation is built around your goals and vision.</p>
 </div>
 
 <div class="card">
 <h3>Long-Term Growth</h3>
-<p>Building sustainable businesses designed to last and scale.</p>
+<p>Building businesses designed to scale and create lasting impact.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
 <h2 class="section-title">Who We Serve</h2>
 
 <div class="audience">
 
-<div class="card">Students</div>
-<div class="card">Graduates</div>
-<div class="card">Side Hustlers</div>
-<div class="card">First-Time Founders</div>
-<div class="card">Freelancers</div>
-<div class="card">Small Business Owners</div>
+<div>Students</div>
+<div>Graduates</div>
+<div>Side Hustlers</div>
+<div>First-Time Founders</div>
+<div>Freelancers</div>
+<div>Small Business Owners</div>
 
 </div>
 
 </div>
+
 </section>
 
 <section style="background:#fafafa;">
+
 <div class="container">
 
 <h2 class="section-title">Why Work With Student Startup Studio</h2>
@@ -504,20 +563,22 @@ Student Startup Studio was built on the belief that entrepreneurship should be a
 <div class="benefits">
 
 <ul>
-<li>✓ Personalized startup support</li>
-<li>✓ Startup-focused expertise</li>
-<li>✓ Clear action plans and accountability</li>
-<li>✓ Professional digital presence guidance</li>
-<li>✓ Practical execution support</li>
-<li>✓ Long-term growth mindset</li>
+<li>✓ Personalized startup guidance</li>
+<li>✓ Clear business strategy and action plans</li>
+<li>✓ Website and digital presence support</li>
+<li>✓ Accountability and founder coaching</li>
+<li>✓ Practical execution-focused consulting</li>
+<li>✓ Support from idea to launch</li>
 </ul>
 
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
 <h2 class="section-title">Our Impact</h2>
@@ -547,24 +608,28 @@ Student Startup Studio was built on the belief that entrepreneurship should be a
 </div>
 
 </div>
+
 </section>
 
 <section style="background:#fafafa;">
+
 <div class="container">
 
 <h2 class="section-title">Our Vision</h2>
 
 <p class="section-subtitle">
-To empower ambitious founders with the tools, knowledge, and support needed to launch sustainable businesses that create impact, opportunity, and long-term success.
+To empower ambitious founders with the tools, knowledge, and support needed to launch sustainable businesses that create opportunity, impact, and long-term success.
 </p>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
-<div class="dark-section">
+<div class="cta">
 
 <h2 style="font-size:clamp(2rem,4vw,3.5rem);">
 Ready to Launch Your Business?
@@ -574,21 +639,14 @@ Ready to Launch Your Business?
 Whether you're still exploring an idea or preparing to launch, we're here to help you take the next step with confidence.
 </p>
 
-<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
-
 <a href="book.html" class="btn btn-primary">
 Book a Startup Session
 </a>
 
-<a href="contact.html" class="btn btn-outline" style="color:white;border-color:white;">
-Contact Us
-</a>
-
 </div>
 
 </div>
 
-</div>
 </section>
 
 <footer>
@@ -603,9 +661,10 @@ Contact Us
 </div>
 
 <div class="footer-links">
-<a href="mailto:info@studentstartupstudio.com">Email</a>
-<a href="#">LinkedIn</a>
-<a href="services-packages.html">Services</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="book.html">Book Session</a>
+<a href="https://wa.me/27604046657">WhatsApp</a>
 <a href="#">Privacy Policy</a>
 <a href="#">Terms of Service</a>
 </div>
@@ -619,6 +678,11 @@ Contact Us
 </div>
 
 </footer>
+
+<div class="sticky-bar">
+<a href="book.html" class="book-mobile">Book Session</a>
+<a href="https://wa.me/27604046657" class="whatsapp-mobile">WhatsApp</a>
+</div>
 
 </body>
 </html>
