@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Startup Session | Student Startup Studio</title>
+
+<meta name="description" content="Book your startup consultation with Student Startup Studio. Pay securely via PayPal and schedule your session today.">
+<meta name="keywords" content="startup consultation, entrepreneur coaching, startup strategy, business coaching, startup mentor">
+<meta name="author" content="Student Startup Studio">
+
+<style>
+:root{
+    --gold:#D4AF37;
+    --gold-dark:#B8922C;
+    --black:#111111;
+    --white:#ffffff;
+    --gray:#f8f8f8;
+    --text:#555;
+    --success:#28a745;
+    --shadow:0 10px 35px rgba(0,0,0,0.08);
+    --radius:20px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,sans-serif;
+    background:#fff;
+    color:#111;
+    line-height:1.7;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+a{
+    text-decoration:none;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 32px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-primary:hover{
+    background:var(--gold-dark);
+    transform:translateY(-3px);
+}
+
+.btn-dark{
+    background:#111;
+    color:#fff;
+}
+
+.btn-dark:hover{
+    transform:translateY(-3px);
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-weight:800;
+    font-size:1.2rem;
+    color:#111;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 0;
+    background:linear-gradient(to bottom,#fff,#f8f8f8);
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:var(--text);
+    font-size:1.1rem;
+}
+
+.trust{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.trust span{
+    background:#fff;
+    padding:10px 18px;
+    border-radius:50px;
+    box-shadow:var(--shadow);
+    font-size:.95rem;
+}
+
+.package-card{
+    background:#fff;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:var(--shadow);
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.price{
+    font-size:4rem;
+    color:var(--gold);
+    font-weight:800;
+    margin:20px 0;
+}
+
+.package-card ul{
+    list-style:none;
+    text-align:left;
+    max-width:450px;
+    margin:25px auto;
+}
+
+.package-card li{
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step{
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:var(--shadow);
+}
+
+.step-number{
+    width:60px;
+    height:60px;
+    margin:auto auto 20px;
+    border-radius:50%;
+    background:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+}
+
+.why{
+    background:#f8f8f8;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.urgency{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    border-radius:30px;
+    padding:60px 30px;
+}
+
+.confirmation{
+    text-align:center;
+}
+
+.confirm-box{
+    display:none;
+    background:#f8fff9;
+    border:2px solid #d6f2dd;
+    padding:35px;
+    border-radius:20px;
+    max-width:800px;
+    margin:30px auto 0;
+}
+
+.confirm-box h3{
+    color:var(--success);
+    margin-bottom:15px;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    margin-top:20px;
+}
+
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.sticky-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:white;
+    box-shadow:0 -5px 25px rgba(0,0,0,.1);
+    display:flex;
+    z-index:1000;
+}
+
+.sticky-bar a{
+    flex:1;
+    text-align:center;
+    padding:16px;
+    font-weight:700;
+}
+
+.pay-btn{
+    background:var(--gold);
+    color:#111;
+}
+
+.chat-btn{
+    background:#111;
+    color:#fff;
+}
+
+@media(min-width:768px){
+    .sticky-bar{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<div class="nav">
+<a href="#" class="logo">Student Startup Studio</a>
+<a href="#payment" class="btn btn-primary">Book Now</a>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>Launch Your Business Today</h1>
+
+<p>
+Get expert startup guidance, a clear action plan, and the support you need to transform your idea into a real business.
+</p>
+
+<div class="trust">
+<span>✓ Secure PayPal Payment</span>
+<span>✓ 1-on-1 Consultation</span>
+<span>✓ WhatsApp Confirmation</span>
+</div>
+
+</div>
+</section>
+
+<section id="payment">
+<div class="container">
+
+<div class="package-card">
+
+<h2>Startup Clarity Session</h2>
+
+<div class="price">R950</div>
+
+<ul>
+<li>✓ 60-Minute Consultation</li>
+<li>✓ Business Idea Validation</li>
+<li>✓ Revenue Model Review</li>
+<li>✓ Personalized Action Plan</li>
+</ul>
+
+<a href="https://www.paypal.me/PericlesKomey963"
+target="_blank"
+class="btn btn-primary">
+Proceed to Secure PayPal Payment
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 style="text-align:center;margin-bottom:50px;">How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Pay Securely</h3>
+<p>Complete your payment using PayPal.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Send Confirmation</h3>
+<p>Share your payment receipt via WhatsApp.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Get Scheduled</h3>
+<p>Receive your consultation booking.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Launch Faster</h3>
+<p>Execute with confidence and clarity.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="why">
+<div class="container">
+
+<h2 style="text-align:center;margin-bottom:50px;">
+Why Entrepreneurs Choose Student Startup Studio
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Startup Strategy</h3>
+<p>Practical business guidance designed for real-world execution.</p>
+</div>
+
+<div class="feature">
+<h3>Clear Direction</h3>
+<p>Know exactly what steps to take next.</p>
+</div>
+
+<div class="feature">
+<h3>Founder Support</h3>
+<p>Personalized guidance tailored to your goals.</p>
+</div>
+
+<div class="feature">
+<h3>Business Growth</h3>
+<p>Move from idea to customers with confidence.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="urgency">
+<h2>Limited Consultation Availability</h2>
+<p style="margin:15px 0 30px;">
+To ensure quality support, consultation slots are limited each week.
+Book now to secure your session.
+</p>
+
+<a href="https://www.paypal.me/PericlesKomey963"
+target="_blank"
+class="btn btn-primary">
+Reserve My Session
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section class="confirmation">
+
+<div class="container">
+
+<h2>Already Paid?</h2>
+
+<p style="margin-top:10px;color:#555;">
+Click below after completing your PayPal payment.
+</p>
+
+<button onclick="showConfirmation()"
+class="btn btn-dark"
+style="margin-top:25px;border:none;cursor:pointer;">
+I've Completed My Payment
+</button>
+
+<div class="confirm-box" id="confirmBox">
+
+<h3>Payment Confirmation Received</h3>
+
+<p>
+Thank you for your payment.
+To finalize your booking, please send your PayPal receipt via WhatsApp.
+Our team will verify your payment and schedule your consultation.
+</p>
+
+<a href="https://wa.me/27604046657?text=Hi%20Pericles,%20I%20have%20completed%20my%20payment%20for%20a%20Student%20Startup%20Studio%20consultation.%20My%20name%20is%20________"
+class="btn whatsapp-btn">
+Send Proof on WhatsApp
+</a>
+
+<p style="margin-top:20px;">
+Or call: <strong>+27 60 404 6657</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+<div class="container">
+
+<div class="urgency">
+
+<h2>Your Business Won't Launch Itself.</h2>
+
+<p style="margin:15px 0 30px;">
+Most ideas never become businesses because founders wait too long.
+Take the first step today.
+</p>
+
+<a href="https://www.paypal.me/PericlesKomey963"
+target="_blank"
+class="btn btn-primary">
+Pay & Book My Session
+</a>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<p><strong>Student Startup Studio</strong></p>
+<p>Helping aspiring entrepreneurs launch businesses with confidence.</p>
+<p style="margin-top:10px;">
+© 2026 Student Startup Studio. All Rights Reserved.
+</p>
+</footer>
+
+<div class="sticky-bar">
+<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="pay-btn">
+Pay Now
+</a>
+
+<a href="https://wa.me/27604046657" class="chat-btn">
+WhatsApp
+</a>
+</div>
+
+<script>
+function showConfirmation(){
+document.getElementById("confirmBox").style.display="block";
+document.getElementById("confirmBox").scrollIntoView({
+behavior:"smooth"
+});
+}
+</script>
+
+</body>
+</html>
