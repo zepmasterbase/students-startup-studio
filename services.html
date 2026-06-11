@@ -3,22 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Services & Packages | Student Startup Studio</title>
+
 <meta name="description" content="Helping aspiring entrepreneurs launch businesses from idea to website to first customers.">
-<meta name="keywords" content="startup consulting, business coaching, website development, entrepreneur support, startup studio, business launch">
+
+<meta name="keywords" content="startup consulting, startup strategy, business coaching, website development, entrepreneur support">
+
 <meta name="author" content="Student Startup Studio">
 
 <style>
 :root{
-    --gold:#d4af37;
-    --gold-dark:#b89328;
+    --gold:#D4AF37;
+    --gold-dark:#B89427;
     --black:#111111;
     --white:#ffffff;
     --gray:#f8f8f8;
     --text:#555555;
-    --shadow:0 10px 30px rgba(0,0,0,0.08);
-    --radius:18px;
-    --transition:all .3s ease;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --radius:22px;
+    --transition:.3s ease;
 }
 
 *{
@@ -33,13 +37,9 @@ html{
 
 body{
     font-family:Inter,Segoe UI,Arial,sans-serif;
-    line-height:1.7;
-    color:var(--black);
     background:#fff;
-}
-
-img{
-    max-width:100%;
+    color:#111;
+    line-height:1.7;
 }
 
 a{
@@ -55,29 +55,44 @@ section{
     padding:90px 0;
 }
 
-h1,h2,h3,h4{
-    line-height:1.2;
-    font-weight:700;
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #eee;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:15px;
-    font-size:clamp(2rem,4vw,3rem);
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
 }
 
-.section-subtitle{
-    text-align:center;
-    color:var(--text);
-    max-width:700px;
-    margin:0 auto 60px;
+.logo{
+    font-size:1.2rem;
+    font-weight:800;
+    color:#111;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#111;
+    font-weight:500;
 }
 
 .btn{
     display:inline-block;
     padding:14px 28px;
     border-radius:50px;
-    font-weight:600;
+    font-weight:700;
     transition:var(--transition);
 }
 
@@ -87,69 +102,35 @@ h1,h2,h3,h4{
 }
 
 .btn-primary:hover{
-    transform:translateY(-3px);
     background:var(--gold-dark);
+    transform:translateY(-3px);
 }
 
 .btn-outline{
-    border:2px solid var(--black);
-    color:var(--black);
+    border:2px solid #111;
+    color:#111;
 }
 
 .btn-outline:hover{
-    background:var(--black);
+    background:#111;
     color:#fff;
-}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #eee;
-}
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
-    gap:20px;
-}
-
-.logo{
-    font-size:1.2rem;
-    font-weight:800;
-    color:var(--black);
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.nav-links a{
-    color:var(--black);
-    font-weight:500;
 }
 
 .hero{
     background:linear-gradient(to bottom,#fff,#fafafa);
     text-align:center;
-    padding:120px 0 100px;
+    padding:120px 0;
 }
 
 .hero h1{
-    font-size:clamp(2.5rem,6vw,4.8rem);
+    font-size:clamp(2.7rem,6vw,5rem);
     margin-bottom:20px;
 }
 
 .hero p{
-    color:var(--text);
     max-width:700px;
     margin:auto;
+    color:var(--text);
     font-size:1.1rem;
 }
 
@@ -161,18 +142,31 @@ header{
     flex-wrap:wrap;
 }
 
+.section-title{
+    text-align:center;
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+    color:var(--text);
+}
+
 .grid{
     display:grid;
     gap:25px;
 }
 
 .services-grid{
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 
 .card{
     background:#fff;
-    padding:30px;
+    padding:35px;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
     transition:var(--transition);
@@ -183,10 +177,10 @@ header{
 }
 
 .icon{
-    width:55px;
-    height:55px;
-    background:#fff8df;
-    border-radius:14px;
+    width:65px;
+    height:65px;
+    background:#fff6d8;
+    border-radius:18px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -194,8 +188,8 @@ header{
 }
 
 .icon svg{
-    width:28px;
-    height:28px;
+    width:30px;
+    height:30px;
     fill:var(--gold);
 }
 
@@ -205,14 +199,20 @@ header{
     color:var(--text);
 }
 
+.pricing{
+    background:#fafafa;
+}
+
 .pricing-grid{
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
 }
 
 .price-card{
     position:relative;
     background:#fff;
-    border-radius:24px;
+    border-radius:28px;
     padding:40px;
     box-shadow:var(--shadow);
     transition:var(--transition);
@@ -222,23 +222,27 @@ header{
     transform:translateY(-10px);
 }
 
-.price{
-    font-size:3rem;
-    font-weight:800;
-    color:var(--gold);
-    margin:20px 0;
+.popular{
+    border:3px solid var(--gold);
 }
 
 .badge{
     position:absolute;
-    top:18px;
-    right:18px;
+    top:20px;
+    right:20px;
     background:var(--gold);
     color:#111;
     padding:8px 14px;
-    border-radius:30px;
-    font-size:.8rem;
+    border-radius:999px;
+    font-size:.85rem;
     font-weight:700;
+}
+
+.price{
+    font-size:3.5rem;
+    font-weight:800;
+    color:var(--gold);
+    margin:20px 0;
 }
 
 .price-card ul{
@@ -247,7 +251,7 @@ header{
 }
 
 .price-card li{
-    padding:10px 0;
+    padding:12px 0;
     border-bottom:1px solid #eee;
 }
 
@@ -258,24 +262,23 @@ header{
 }
 
 .step{
-    text-align:center;
-    padding:30px;
     background:#fff;
-    box-shadow:var(--shadow);
+    padding:30px;
+    text-align:center;
     border-radius:20px;
+    box-shadow:var(--shadow);
 }
 
 .step-number{
     width:60px;
     height:60px;
-    margin:auto auto 20px;
-    border-radius:50%;
     background:var(--gold);
-    color:#111;
-    font-weight:800;
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
+    margin:0 auto 20px;
+    font-weight:800;
 }
 
 .audience{
@@ -288,26 +291,22 @@ header{
     background:#fff;
     padding:25px;
     text-align:center;
-    border-radius:16px;
+    border-radius:18px;
     box-shadow:var(--shadow);
     font-weight:600;
 }
 
 .founder{
     display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:40px;
+    grid-template-columns:350px 1fr;
+    gap:50px;
     align-items:center;
 }
 
 .founder-image{
+    height:420px;
+    border-radius:25px;
     background:linear-gradient(135deg,#111,#333);
-    min-height:320px;
-    border-radius:24px;
-}
-
-.founder-content{
-    background:#fff;
 }
 
 .faq{
@@ -318,31 +317,31 @@ header{
 .faq-item{
     background:#fff;
     padding:25px;
-    margin-bottom:20px;
     border-radius:18px;
     box-shadow:var(--shadow);
+    margin-bottom:20px;
 }
 
 .cta{
     background:#111;
     color:#fff;
     text-align:center;
-    border-radius:30px;
-    padding:80px 30px;
+    border-radius:35px;
+    padding:80px 40px;
 }
 
 .cta h2{
-    font-size:clamp(2rem,5vw,3.5rem);
+    font-size:clamp(2rem,4vw,3.5rem);
     margin-bottom:15px;
 }
 
 .cta p{
-    margin-bottom:30px;
     color:#ddd;
+    margin-bottom:30px;
 }
 
 footer{
-    background:#0c0c0c;
+    background:#111;
     color:#fff;
     padding:50px 0;
 }
@@ -364,10 +363,44 @@ footer{
     color:#ddd;
 }
 
+.sticky-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:flex;
+    z-index:999;
+    box-shadow:0 -5px 20px rgba(0,0,0,.1);
+}
+
+.sticky-bar a{
+    flex:1;
+    text-align:center;
+    padding:15px;
+    font-weight:700;
+}
+
+.book-btn{
+    background:var(--gold);
+    color:#111;
+}
+
+.chat-btn{
+    background:#111;
+    color:#fff;
+}
+
+@media(min-width:769px){
+    .sticky-bar{
+        display:none;
+    }
+}
+
 @media(max-width:768px){
 
     .navbar{
         flex-direction:column;
+        gap:15px;
     }
 
     .founder{
@@ -386,42 +419,52 @@ footer{
 <header>
 <div class="container">
 <nav class="navbar">
-<a href="#" class="logo">Student Startup Studio</a>
+
+<a href="index.html" class="logo">
+Student Startup Studio
+</a>
 
 <div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="book.html" class="btn btn-primary">Book Session</a>
 </div>
 
-<a href="#" class="btn btn-primary">Book Session</a>
 </nav>
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
+
 <h1>Launch Your Business With Confidence</h1>
-<p>Choose the right level of support to transform your idea into a real business.</p>
+
+<p>
+Choose the right level of support to transform your idea into a real business.
+</p>
 
 <div class="hero-buttons">
-<a href="#" class="btn btn-primary">Book a Startup Session</a>
-<a href="#" class="btn btn-outline">Contact Us</a>
+<a href="book.html" class="btn btn-primary">Book a Startup Session</a>
+<a href="about.html" class="btn btn-outline">Learn More</a>
 </div>
+
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2 class="section-title">Services Overview</h2>
-<p class="section-subtitle">Everything you need to move from idea to execution.</p>
 
-<div class="grid services-grid">
+<h2 class="section-title">Our Services</h2>
+<p class="section-subtitle">
+Everything you need to move from idea to execution.
+</p>
+
+<div class="services-grid">
 
 <div class="card">
 <div class="icon">
-<svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5.25-3.44 10.17-8 11-4.56-.83-8-5.75-8-11V6l8-4z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5.25-3.44 10.17-8 11-4.56-.83-8-5.75-8-11V6z"/></svg>
 </div>
 <h3>Business Idea Validation</h3>
 <ul>
@@ -433,7 +476,7 @@ footer{
 
 <div class="card">
 <div class="icon">
-<svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm10 8h8V3h-8v18zM3 21h8v-6H3v6z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M3 13h8V3H3zm10 8h8V3h-8z"/></svg>
 </div>
 <h3>Startup Strategy</h3>
 <ul>
@@ -445,7 +488,7 @@ footer{
 
 <div class="card">
 <div class="icon">
-<svg viewBox="0 0 24 24"><path d="M4 4h16v14H4V4zm2 2v10h12V6H6zm-2 14h16v2H4z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M4 4h16v14H4z"/></svg>
 </div>
 <h3>Website Development</h3>
 <ul>
@@ -468,15 +511,19 @@ footer{
 </div>
 
 </div>
+
 </div>
 </section>
 
-<section style="background:#fafafa;">
+<section class="pricing">
 <div class="container">
-<h2 class="section-title">Startup Packages</h2>
-<p class="section-subtitle">Choose the package that matches your stage of growth.</p>
 
-<div class="grid pricing-grid">
+<h2 class="section-title">Startup Packages</h2>
+<p class="section-subtitle">
+Choose the package that matches your stage of growth.
+</p>
+
+<div class="pricing-grid">
 
 <div class="price-card">
 <h3>Startup Clarity Session</h3>
@@ -489,12 +536,15 @@ footer{
 <li>Personalized action plan</li>
 </ul>
 
-<a href="#" class="btn btn-primary">Book Session</a>
+<a href="book.html" class="btn btn-primary">Book Session</a>
 </div>
 
-<div class="price-card">
+<div class="price-card popular">
+
 <span class="badge">Most Popular</span>
+
 <h3>Startup Launch Blueprint</h3>
+
 <div class="price">R3,000</div>
 
 <ul>
@@ -506,11 +556,14 @@ footer{
 <li>30-day launch roadmap</li>
 </ul>
 
-<a href="#" class="btn btn-primary">Get Blueprint</a>
+<a href="book.html" class="btn btn-primary">Get Blueprint</a>
+
 </div>
 
 <div class="price-card">
+
 <h3>Business Launch Package</h3>
+
 <div class="price">R15,000</div>
 
 <ul>
@@ -523,18 +576,22 @@ footer{
 <li>Brand positioning guidance</li>
 </ul>
 
-<a href="#" class="btn btn-primary">Apply Now</a>
+<a href="book.html" class="btn btn-primary">Apply Now</a>
+
 </div>
 
 </div>
+
 </div>
 </section>
 
 <section>
 <div class="container">
+
 <h2 class="section-title">How It Works</h2>
 
 <div class="steps">
+
 <div class="step">
 <div class="step-number">1</div>
 <h3>Book Consultation</h3>
@@ -554,12 +611,15 @@ footer{
 <div class="step-number">4</div>
 <h3>Grow & Scale</h3>
 </div>
+
 </div>
+
 </div>
 </section>
 
 <section style="background:#fafafa;">
 <div class="container">
+
 <h2 class="section-title">Who We Help</h2>
 
 <div class="audience">
@@ -569,48 +629,60 @@ footer{
 <div>First-Time Founders</div>
 <div>Small Business Owners</div>
 </div>
+
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2 class="section-title">Meet Pericles</h2>
 
 <div class="founder">
+
 <div class="founder-image"></div>
 
-<div class="founder-content">
-<h3>Founder of Student Startup Studio & Zep Swipe</h3>
+<div>
+<h2>Meet Pericles</h2>
+
 <p>
-Helping aspiring entrepreneurs turn ideas into real businesses through strategy,
-execution, and digital presence. Student Startup Studio exists to bridge the gap
-between inspiration and implementation, providing founders with practical support
-that accelerates their journey from concept to customers.
+Founder of Student Startup Studio and Zep Swipe.
+Helping aspiring entrepreneurs turn ideas into real businesses through strategy, execution, and digital presence.
 </p>
+
+<p>
+Whether you're validating your first idea or preparing to launch, you'll receive practical guidance designed to help you move forward with confidence.
+</p>
+
+<div style="margin-top:25px;">
+<a href="about.html" class="btn btn-outline">Learn More</a>
 </div>
+
 </div>
+
+</div>
+
 </div>
 </section>
 
 <section style="background:#fafafa;">
 <div class="container">
+
 <h2 class="section-title">Frequently Asked Questions</h2>
 
 <div class="faq">
 
 <div class="faq-item">
 <h3>Do I need a business idea already?</h3>
-<p>No. We can help you refine opportunities and identify viable business concepts.</p>
+<p>No. We can help you identify, refine, and validate business opportunities.</p>
 </div>
 
 <div class="faq-item">
 <h3>Are consultations virtual?</h3>
-<p>Yes. All consultations can be conducted virtually.</p>
+<p>Yes. All consultations are conducted virtually.</p>
 </div>
 
 <div class="faq-item">
 <h3>Is this only for students?</h3>
-<p>No. We help aspiring entrepreneurs, founders, professionals, and business owners.</p>
+<p>No. We work with aspiring entrepreneurs, side hustlers, founders, and business owners.</p>
 </div>
 
 <div class="faq-item">
@@ -619,21 +691,34 @@ that accelerates their journey from concept to customers.
 </div>
 
 </div>
+
 </div>
 </section>
 
 <section>
 <div class="container">
+
 <div class="cta">
+
 <h2>Your Business Won't Launch Itself.</h2>
-<p>Take the first step today.</p>
-<a href="#" class="btn btn-primary">Book My Startup Session</a>
+
+<p>
+Take the first step today and start building your business with confidence.
+</p>
+
+<a href="book.html" class="btn btn-primary">
+Book My Startup Session
+</a>
+
 </div>
+
 </div>
 </section>
 
 <footer>
+
 <div class="container">
+
 <div class="footer-content">
 
 <div>
@@ -642,10 +727,11 @@ that accelerates their journey from concept to customers.
 </div>
 
 <div class="footer-links">
-<a href="mailto:info@studentstartupstudio.com">Email</a>
-<a href="#">LinkedIn</a>
-<a href="#">Privacy Policy</a>
-<a href="#">Terms of Service</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="book.html">Book Session</a>
+<a href="https://wa.me/27604046657">WhatsApp</a>
 </div>
 
 </div>
@@ -653,22 +739,15 @@ that accelerates their journey from concept to customers.
 <div style="margin-top:25px;color:#aaa;">
 © 2026 Student Startup Studio. All Rights Reserved.
 </div>
+
 </div>
+
 </footer>
 
-<!--
-PLACEHOLDER INTEGRATIONS
-
-PayPal:
-https://paypal.me/yourlink
-
-WhatsApp:
-https://wa.me/your-number
-
-Calendly:
-https://calendly.com/your-link
-
--->
+<div class="sticky-bar">
+<a href="book.html" class="book-btn">Book Session</a>
+<a href="https://wa.me/27604046657" class="chat-btn">WhatsApp</a>
+</div>
 
 </body>
 </html>
