@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Book Your Startup Session | Student Startup Studio</title>
-
-<meta name="description" content="Book your startup consultation with Student Startup Studio. Choose your package, pay securely via PayPal, and confirm via WhatsApp.">
-
-<meta name="keywords" content="startup consultation, entrepreneur coaching, startup mentor, startup strategy, startup launch">
-
-<meta name="author" content="Student Startup Studio">
-
-<style>
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Book Your Startup Session | Student Startup Studio</title><meta name="description" content="Book your startup consultation with Student Startup Studio. Choose your package, pay securely via PayPal, and confirm your booking through WhatsApp."><meta name="keywords" content="startup consultation, entrepreneur coaching, startup mentor, startup strategy, startup launch, business consultation"><meta name="author" content="Student Startup Studio"><meta name="robots" content="index, follow"><style>
 
 :root{
 --gold:#D4AF37;
@@ -93,6 +81,8 @@ background:#111;
 color:#fff;
 }
 
+/* HEADER */
+
 header{
 position:sticky;
 top:0;
@@ -126,6 +116,8 @@ flex-wrap:wrap;
 color:#111;
 font-weight:600;
 }
+
+/* HERO */
 
 .hero{
 padding:120px 0;
@@ -161,6 +153,8 @@ box-shadow:var(--shadow);
 font-weight:600;
 }
 
+/* SECTION */
+
 .section-title{
 text-align:center;
 font-size:clamp(2rem,4vw,3.5rem);
@@ -173,6 +167,8 @@ max-width:750px;
 margin:0 auto 60px;
 color:var(--text);
 }
+
+/* PACKAGES */
 
 .packages{
 display:grid;
@@ -234,6 +230,20 @@ margin:20px 0;
 font-weight:600;
 }
 
+.payment-label{
+font-size:.9rem;
+font-weight:700;
+margin-bottom:12px;
+color:#555;
+}
+
+.paypal-button{
+margin-top:15px;
+min-height:45px;
+}
+
+/* STEPS */
+
 .steps{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -260,6 +270,8 @@ justify-content:center;
 font-weight:800;
 }
 
+/* PAYMENT BOX */
+
 .payment-box{
 background:#111;
 color:#fff;
@@ -272,6 +284,8 @@ text-align:center;
 color:#ddd;
 margin:15px 0 30px;
 }
+
+/* FOUNDER */
 
 .founder{
 display:grid;
@@ -291,6 +305,8 @@ margin-top:15px;
 color:var(--text);
 }
 
+/* FAQ */
+
 .faq{
 max-width:900px;
 margin:auto;
@@ -303,6 +319,13 @@ border-radius:20px;
 box-shadow:var(--shadow);
 margin-bottom:20px;
 }
+
+.faq-item p{
+margin-top:8px;
+color:var(--text);
+}
+
+/* CTA */
 
 .cta{
 background:#111;
@@ -317,6 +340,8 @@ max-width:700px;
 margin:15px auto 30px;
 color:#ddd;
 }
+
+/* FOOTER */
 
 footer{
 background:#111;
@@ -340,6 +365,8 @@ flex-wrap:wrap;
 .footer-links a{
 color:#ddd;
 }
+
+/* MOBILE BAR */
 
 .sticky-bar{
 position:fixed;
@@ -369,9 +396,11 @@ color:#fff;
 }
 
 @media(min-width:769px){
+
 .sticky-bar{
 display:none;
 }
+
 }
 
 @media(max-width:768px){
@@ -392,337 +421,454 @@ padding:90px 0;
 .package-popular{
 transform:none;
 }
+
+.payment-box{
+padding:45px 25px;
 }
 
-</style>
-</head>
+}
 
-<body>
+</style><!--
+IMPORTANT:
 
-<header>
+Replace YOUR_PAYPAL_CLIENT_ID with your real PayPal
+JavaScript SDK Client ID.
 
-<div class="container">
+The backend endpoints required below are:
 
-<nav class="navbar">
+/api/create-paypal-order
+/api/capture-paypal-order
 
-<a href="index.html" class="logo">
+Do NOT put your PayPal Secret in this file.
+--><script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=ZAR&components=buttons"></script></head><body><!-- HEADER --><header><div class="container"><nav class="navbar"><a href="index.html" class="logo">
 Student Startup Studio
-</a>
+</a><div class="nav-links"><a href="index.html">Home</a>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
 <a href="services.html">Services</a>
+
 <a href="about.html">About</a>
-<a href="book.html" class="btn btn-primary">Book Session</a>
-</div>
 
-</nav>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="container">
-
-<h1>Book Your Startup Session</h1>
-
-<p>
+<a href="book.html" class="btn btn-primary">
+Book Session
+</a></div></nav></div></header><!-- HERO --><section class="hero"><div class="container"><h1>
+Book Your Startup Session
+</h1><p>
 Choose the right package to move from idea to launch with expert startup guidance, strategy, and execution support.
-</p>
-
-<div class="hero-badges">
-<div class="badge">✓ Secure PayPal Payment</div>
-<div class="badge">✓ Virtual Consultations</div>
-<div class="badge">✓ WhatsApp Confirmation</div>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">Choose Your Package</h2>
-
-<p class="section-subtitle">
+</p><div class="hero-badges"><div class="badge">
+✓ Secure PayPal Payment
+</div><div class="badge">
+✓ Virtual Consultations
+</div><div class="badge">
+✓ WhatsApp Confirmation
+</div></div></div></section><!-- PACKAGES --><section><div class="container"><h2 class="section-title">
+Choose Your Package
+</h2><p class="section-subtitle">
 Select the option that best fits your business stage and goals.
-</p>
-
-<div class="packages">
-
-<div class="package">
-
-<h3>Startup Clarity Session</h3>
-
-<div class="price">R2999</div>
-
-<div class="best-for">
+</p><div class="packages"><!-- CLARITY --><div class="package"><h3>
+Startup Clarity Session
+</h3><div class="price">
+R2,999
+</div><div class="best-for">
 Best For: Students, Side Hustlers & First-Time Founders
-</div>
-
-<ul>
-<li>✓ 60-minute consultation</li>
-<li>✓ Business idea validation</li>
-<li>✓ Revenue model review</li>
-<li>✓ Personalized action plan</li>
-</ul>
-
-<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="btn btn-primary">
-Choose Clarity Session
-</a>
-
-</div>
-
-<div class="package package-popular">
-
-<div class="popular-tag">Most Popular</div>
-
-<h3>Startup Launch Blueprint</h3>
-
-<div class="price">R9,899</div>
-
-<div class="best-for">
+</div><ul><li>✓ 60-minute consultation</li><li>✓ Business idea validation</li><li>✓ Revenue model review</li><li>✓ Personalized action plan</li></ul><div class="payment-label">
+Pay securely with PayPal
+</div><div
+id="paypal-clarity"
+class="paypal-button">
+</div></div><!-- BLUEPRINT --><div class="package package-popular"><div class="popular-tag">
+Most Popular
+</div><h3>
+Startup Launch Blueprint
+</h3><div class="price">
+R9,899
+</div><div class="best-for">
 Best For: Entrepreneurs Ready To Launch
-</div>
-
-<ul>
-<li>✓ 90-minute strategy consultation</li>
-<li>✓ Business model design</li>
-<li>✓ Pricing strategy</li>
-<li>✓ Customer acquisition plan</li>
-<li>✓ Competitor review</li>
-<li>✓ 30-day launch roadmap</li>
-</ul>
-
-<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="btn btn-primary">
-Choose Blueprint
-</a>
-
-</div>
-
-<div class="package">
-
-<h3>Business Launch Package</h3>
-
-<div class="price">R24,999</div>
-
-<div class="best-for">
+</div><ul><li>✓ 90-minute strategy consultation</li><li>✓ Business model design</li><li>✓ Pricing strategy</li><li>✓ Customer acquisition plan</li><li>✓ Competitor review</li><li>✓ 30-day launch roadmap</li></ul><div class="payment-label">
+Pay securely with PayPal
+</div><div
+id="paypal-blueprint"
+class="paypal-button">
+</div></div><!-- BUSINESS LAUNCH --><div class="package"><h3>
+Business Launch Package
+</h3><div class="price">
+R24,999
+</div><div class="best-for">
 Best For: Serious Founders Ready To Build
-</div>
+</div><ul><li>✓ Strategy consultation</li><li>✓ Launch roadmap</li><li>✓ Professional website</li><li>✓ Domain setup</li><li>✓ Business email setup</li><li>✓ Brand positioning guidance</li><li>✓ Launch support</li></ul><div class="payment-label">
+Pay securely with PayPal
+</div><div
+id="paypal-business"
+class="paypal-button">
+</div></div></div></div></section><!-- HOW IT WORKS --><section style="background:#fafafa;"><div class="container"><h2 class="section-title">
+How Booking Works
+</h2><p class="section-subtitle">
+Your booking takes just a few simple steps.
+</p><div class="steps"><div class="step"><div class="step-number">
+1
+</div><h3>
+Select Package
+</h3><p>
+Choose the consultation that fits your current business needs.
+</p></div><div class="step"><div class="step-number">
+2
+</div><h3>
+Pay Via PayPal
+</h3><p>
+Complete your payment securely through PayPal Checkout.
+</p></div><div class="step"><div class="step-number">
+3
+</div><h3>
+Payment Confirmed
+</h3><p>
+After successful payment you'll be taken to our Thank You page.
+</p></div><div class="step"><div class="step-number">
+4
+</div><h3>
+Confirm On WhatsApp
+</h3><p>
+Send your receipt and we'll arrange your consultation.
+</p></div></div></div></section><!-- ALREADY PAID --><section><div class="container"><div class="payment-box"><h2>
+Already Paid?
+</h2><p>
+If you've already completed your payment, you can contact us directly on WhatsApp to confirm your booking.
+</p><a
+href="https://wa.me/27604046657?text=Hello%20Pericles,%20I%20have%20completed%20my%20payment%20for%20a%20Student%20Startup%20Studio%20session%20and%20would%20like%20to%20confirm%20my%20booking."
+class="btn btn-primary">
 
-<ul>
-<li>✓ Strategy consultation</li>
-<li>✓ Launch roadmap</li>
-<li>✓ Professional website</li>
-<li>✓ Domain setup</li>
-<li>✓ Business email setup</li>
-<li>✓ Brand positioning guidance</li>
-<li>✓ Launch support</li>
-</ul>
-
-<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="btn btn-primary">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section style="background:#fafafa;">
-
-<div class="container">
-
-<h2 class="section-title">How Booking Works</h2>
-
-<div class="steps">
-
-<div class="step">
-<div class="step-number">1</div>
-<h3>Select Package</h3>
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-<h3>Pay Via PayPal</h3>
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-<h3>Send Receipt</h3>
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-<h3>Schedule Session</h3>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="payment-box">
-
-<h2>Already Paid?</h2>
-
-<p>
-Send your PayPal receipt via WhatsApp and we'll confirm your booking and arrange your consultation.
-</p>
-
-<a href="https://wa.me/27604046657?text=Hello%20Pericles,%20I%20have%20completed%20my%20payment%20and%20would%20like%20to%20confirm%20my%20booking." class="btn btn-primary">
 Confirm Booking On WhatsApp
-</a>
 
-</div>
+</a></div></div></section><!-- FOUNDER --><section><div class="container"><div class="founder"><img
+src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jjume32e1ns3ael10lkpd4106p15.jpeg"
+alt="Pericles, Founder of Student Startup Studio"
+loading="lazy">
 
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="founder">
-
-<img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jjume32e1ns3ael10lkpd4106p15.jpeg" alt="Pericles Founder">
-
-<div>
-
-<h2>Meet Pericles</h2>
-
-<p>
+<div><h2>
+Meet Pericles
+</h2><p>
 Founder of Student Startup Studio and Zep Swipe.
-</p>
-
-<p>
+</p><p>
 Helping aspiring entrepreneurs turn ideas into real businesses through strategy, execution, and digital presence.
-</p>
-
-<p>
+</p><p>
 Whether you're validating a business idea or preparing for launch, you'll receive practical guidance focused on helping you move forward with confidence.
-</p>
-
-<a href="about.html" class="btn btn-outline">
+</p><a href="about.html" class="btn btn-outline">
 Learn More
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section style="background:#fafafa;">
-
-<div class="container">
-
-<h2 class="section-title">Frequently Asked Questions</h2>
-
-<div class="faq">
-
-<div class="faq-item">
-<h3>Is payment secure?</h3>
-<p>Yes. Payments are processed securely through PayPal.</p>
-</div>
-
-<div class="faq-item">
-<h3>Are consultations virtual?</h3>
-<p>Yes. All consultations are conducted online.</p>
-</div>
-
-<div class="faq-item">
-<h3>What happens after payment?</h3>
-<p>Send your receipt via WhatsApp and we'll schedule your session.</p>
-</div>
-
-<div class="faq-item">
-<h3>Can I upgrade my package later?</h3>
-<p>Yes. You can upgrade to a higher package at any time.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="cta">
-
-<h2 style="font-size:clamp(2rem,4vw,3.5rem);">
+</a></div></div></div></section><!-- FAQ --><section style="background:#fafafa;"><div class="container"><h2 class="section-title">
+Frequently Asked Questions
+</h2><div class="faq"><div class="faq-item"><h3>
+Is payment secure?
+</h3><p>
+Yes. Payments are processed through PayPal's secure checkout.
+</p></div><div class="faq-item"><h3>
+Are consultations virtual?
+</h3><p>
+Yes. All consultations are conducted online.
+</p></div><div class="faq-item"><h3>
+What happens after payment?
+</h3><p>
+After your payment is successfully completed, you'll be redirected to our Thank You page where you can continue to WhatsApp and confirm your booking.
+</p></div><div class="faq-item"><h3>
+Can I upgrade my package later?
+</h3><p>
+Yes. You can discuss an upgrade with us after your consultation.
+</p></div></div></div></section><!-- CTA --><section><div class="container"><div class="cta"><h2 style="font-size:clamp(2rem,4vw,3.5rem);">
 Your Future Business Starts Today
-</h2>
-
-<p>
+</h2><p>
 The best time to start was yesterday. The second best time is now.
-</p>
+</p><a
+href="#packages"
+class="btn btn-primary"
+onclick="window.scrollTo({top:document.querySelector('.packages').offsetTop-100,behavior:'smooth'});return false;">
 
-<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="btn btn-primary">
 Book & Pay Now
-</a>
 
-</div>
+</a></div></div></section><!-- FOOTER --><footer><div class="container"><div class="footer-content"><div><h3>
+Student Startup Studio
+</h3><p>
+Helping entrepreneurs launch with confidence.
+</p></div><div class="footer-links"><a href="index.html">
+Home
+</a><a href="services.html">
+Services
+</a><a href="about.html">
+About
+</a><a href="book.html">
+Book Session
+</a><a href="https://wa.me/27604046657">
+WhatsApp
+</a></div></div><p style="margin-top:25px;color:#aaa;">© 2026 Student Startup Studio. All Rights Reserved.
 
-</div>
-
-</section>
-
-<footer>
-
-<div class="container">
-
-<div class="footer-content">
-
-<div>
-<h3>Student Startup Studio</h3>
-<p>Helping entrepreneurs launch with confidence.</p>
-</div>
-
-<div class="footer-links">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="book.html">Book Session</a>
-<a href="https://wa.me/27842946281">WhatsApp</a>
-</div>
-
-</div>
-
-<p style="margin-top:25px;color:#aaa;">
-© 2026 Student Startup Studio. All Rights Reserved.
-</p>
-
-</div>
-
-</footer>
-
-<div class="sticky-bar">
-<a href="https://www.paypal.me/PericlesKomey963" target="_blank" class="mobile-pay">
+</p></div></footer><!-- MOBILE BAR --><div class="sticky-bar"><a
+href="#"
+class="mobile-pay"
+onclick="window.scrollTo({top:document.querySelector('.packages').offsetTop-80,behavior:'smooth'});return false;">
 Pay Now
 </a>
-<a href="https://wa.me/27842946281" class="mobile-whatsapp">
+
+<a
+href="https://wa.me/27604046657?text=Hello%20Pericles,%20I%20would%20like%20to%20book%20a%20Student%20Startup%20Studio%20session."
+class="mobile-whatsapp">
 WhatsApp
 </a>
-</div>
 
-</body>
+</div><!-- PAYPAL LOGIC --><script>
+
+const PAYPAL_CREATE_ORDER_ENDPOINT =
+"/api/create-paypal-order";
+
+const PAYPAL_CAPTURE_ORDER_ENDPOINT =
+"/api/capture-paypal-order";
+
+
+/*
+|--------------------------------------------------------------------------
+| PayPal Checkout
+|--------------------------------------------------------------------------
+|
+| Each package gets its own PayPal button.
+|
+| After PayPal successfully captures the payment:
+|
+| booking.html
+|       ↓
+| PayPal
+|       ↓
+| payment captured
+|       ↓
+| thank-you.html
+|
+|--------------------------------------------------------------------------
+*/
+
+
+function createPayPalButton(containerId, packageName, amount){
+
+paypal.Buttons({
+
+style:{
+layout:"vertical",
+shape:"rect",
+label:"paypal",
+height:48
+},
+
+
+/*
+|--------------------------------------------------------------------------
+| CREATE ORDER
+|--------------------------------------------------------------------------
+*/
+
+createOrder:function(){
+
+return fetch(PAYPAL_CREATE_ORDER_ENDPOINT,{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+package:packageName,
+
+amount:amount,
+
+currency:"ZAR"
+
+})
+
+})
+
+.then(function(response){
+
+if(!response.ok){
+throw new Error("Unable to create PayPal order.");
+}
+
+return response.json();
+
+})
+
+.then(function(order){
+
+return order.id;
+
+});
+
+},
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT APPROVED
+|--------------------------------------------------------------------------
+*/
+
+onApprove:function(data){
+
+return fetch(
+PAYPAL_CAPTURE_ORDER_ENDPOINT,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+orderID:data.orderID
+
+})
+
+})
+
+.then(function(response){
+
+if(!response.ok){
+
+throw new Error(
+"Payment capture failed."
+);
+
+}
+
+return response.json();
+
+})
+
+.then(function(orderData){
+
+/*
+*
+* IMPORTANT:
+*
+* Only redirect after the backend confirms
+* that the PayPal order was successfully captured.
+*
+*/
+
+if(
+orderData.status === "COMPLETED" ||
+orderData.success === true
+){
+
+const params =
+new URLSearchParams({
+
+package:packageName,
+
+order:data.orderID
+
+});
+
+window.location.href =
+"thank-you.html?" + params.toString();
+
+}else{
+
+throw new Error(
+"PayPal payment was not completed."
+);
+
+}
+
+})
+
+.catch(function(error){
+
+console.error(error);
+
+alert(
+"We couldn't confirm the payment. Please contact us on WhatsApp before making another payment."
+);
+
+});
+
+},
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT CANCELLED
+|--------------------------------------------------------------------------
+*/
+
+onCancel:function(data){
+
+console.log(
+"PayPal checkout cancelled:",
+data.orderID
+);
+
+alert(
+"Payment was cancelled. No booking was confirmed."
+);
+
+},
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT ERROR
+|--------------------------------------------------------------------------
+*/
+
+onError:function(error){
+
+console.error(
+"PayPal error:",
+error
+);
+
+alert(
+"Something went wrong with PayPal. Please try again or contact us on WhatsApp."
+);
+
+}
+
+}).render("#" + containerId);
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| RENDER THE THREE PACKAGES
+|--------------------------------------------------------------------------
+*/
+
+if(window.paypal){
+
+createPayPalButton(
+"paypal-clarity",
+"Startup Clarity Session",
+"2999.00"
+);
+
+
+createPayPalButton(
+"paypal-blueprint",
+"Startup Launch Blueprint",
+"9899.00"
+);
+
+
+createPayPalButton(
+"paypal-business",
+"Business Launch Package",
+"24999.00"
+);
+
+}else{
+
+console.error(
+"PayPal SDK failed to load."
+);
+
+}
+
+</script></body>
 </html>
