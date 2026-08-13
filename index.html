@@ -1,208 +1,1001 @@
-<!DOCTYPE html>    
-<html lang="en">    
-<head>    
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Student Startup Studio | Your Business Deserves a Website That Works as Hard as You Do.</title>    
-<meta name="description" content="Student Startup Studio helps aspiring entrepreneurs launch businesses from idea to website to first customers.">    
-<style>    
-:root{--gold:#d4af37;--black:#111;--white:#fff;--gray:#f8f8f8;--text:#555;--shadow:0 10px 30px rgba(0,0,0,.08)}    
-*{margin:0;padding:0;box-sizing:border-box}    
-body{font-family:Inter,Arial,sans-serif;color:var(--black);line-height:1.7}    
-.container{width:min(1200px,92%);margin:auto}    
-a{text-decoration:none}    
-section{padding:90px 0}    
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:1000}    
-.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}    
-.logo{font-weight:800;color:#111}    
-.navlinks{display:flex;gap:22px;align-items:center}    
-.navlinks a{color:#111}    
-.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700}    
-.gold{background:var(--gold);color:#111}    
-.outline{border:2px solid #111;color:#111}    
-.hero{background:linear-gradient(to bottom,#fff,#fafafa)}    
-.hero-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}    
-h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.1;margin-bottom:20px}    
-.hero p{color:var(--text);font-size:1.1rem}    
-.hero-actions{margin-top:28px;display:flex;gap:15px;flex-wrap:wrap}    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Startup Studio | Build. Launch. Grow.</title>
+<meta name="description" content="Student Startup Studio helps entrepreneurs and small businesses build stronger websites, launch with confidence, and grow. Get a free website audit or upgrade your website for $1,500.">
+<meta name="theme-color" content="#111111">
+<style>
+:root{
+  --gold:#d4af37;
+  --gold-dark:#b89116;
+  --black:#111111;
+  --white:#ffffff;
+  --gray:#f7f7f5;
+  --muted:#666666;
+  --line:#e9e9e9;
+  --shadow:0 18px 50px rgba(0,0,0,.08);
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  color:var(--black);
+  background:#fff;
+  line-height:1.65;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+section{padding:90px 0}
+h1,h2,h3{line-height:1.15}
+h1{font-size:clamp(2.7rem,6vw,5.3rem);letter-spacing:-.045em}
+h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.025em}
+h3{font-size:1.25rem}
+p{color:var(--muted)}
+.center{text-align:center}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid #e4d29a;
+  background:#fffaf0;
+  border-radius:999px;
+  color:#6d5714;
+  font-weight:800;
+  font-size:.82rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:15px 24px;
+  border-radius:999px;
+  font-weight:800;
+  transition:.2s ease;
+  border:2px solid transparent;
+}
+.btn:hover{transform:translateY(-2px)}
+.gold{background:var(--gold);color:#111}
+.gold:hover{background:var(--gold-dark)}
+.dark-btn{background:#111;color:#fff}
+.outline{border-color:#111;color:#111;background:#fff}
+.btn-small{padding:11px 18px;font-size:.92rem}
 
-.mockup{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:0;overflow:hidden}    
-.mockup img{width:100%;height:auto;display:block}    
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-.02em;
+}
+.logo span{color:var(--gold-dark)}
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+.navlinks a:not(.btn){font-weight:650}
+.mobile-menu{display:none}
 
-.trust{display:flex;gap:15px;flex-wrap:wrap;margin-top:25px}    
-.trust span{padding:10px 16px;background:#fff;border-radius:999px;box-shadow:var(--shadow)}    
-.grid{display:grid;gap:24px}    
-.cards4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}    
-.card{background:#fff;padding:28px;border-radius:20px;box-shadow:var(--shadow)}    
-.center{text-align:center}    
-.stats{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}    
-.stat h3{font-size:2.5rem;color:var(--gold)}    
-.steps{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}    
-.stepnum{width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 15px}    
-.package{border:3px solid var(--gold)}    
+/* Hero */
+.hero{
+  padding:72px 0 55px;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(212,175,55,.14),transparent 32%),
+    linear-gradient(to bottom,#fff,#fafafa);
+}
+.hero-wrap{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:58px;
+  align-items:center;
+}
+.hero h1{margin:18px 0 22px;max-width:780px}
+.hero h1 strong{font-weight:900}
+.hero-copy{font-size:1.16rem;max-width:690px}
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.micro-proof{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+.micro-proof span{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  font-size:.88rem;
+  font-weight:700;
+}
+.offer-card{
+  background:#111;
+  color:#fff;
+  padding:34px;
+  border-radius:28px;
+  box-shadow:0 25px 70px rgba(0,0,0,.18);
+  position:relative;
+  overflow:hidden;
+}
+.offer-card:before{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  background:rgba(212,175,55,.13);
+  right:-90px;
+  top:-90px;
+}
+.offer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  position:relative;
+}
+.badge{
+  background:var(--gold);
+  color:#111;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.offer-card h2{font-size:2rem;margin:20px 0 8px;position:relative}
+.price{font-size:3.5rem;font-weight:900;color:var(--gold);line-height:1}
+.price small{font-size:1rem;color:#bbb;font-weight:600}
+.offer-list{
+  list-style:none;
+  margin:24px 0;
+  display:grid;
+  gap:11px;
+}
+.offer-list li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:10px}
+.offer-card .btn{width:100%;position:relative}
+.offer-note{font-size:.82rem;color:#aaa;text-align:center;margin-top:12px}
 
-.founder{display:grid;grid-template-columns:360px 1fr;gap:40px;align-items:center}    
-.photo{height:auto;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}    
-.photo img{width:100%;height:100%;display:block;object-fit:cover}    
+/* Proof strip */
+.proof-strip{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  padding:20px 0;
+}
+.proof-items{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px 30px;
+  color:#444;
+  font-weight:750;
+  font-size:.92rem;
+}
+.proof-items span:before{content:"•";color:var(--gold-dark);margin-right:8px}
 
-.dark{background:#111;color:#fff;border-radius:30px;padding:70px 30px;text-align:center}    
-footer{background:#111;color:#fff;padding:40px 0}    
-.footerlinks{display:flex;gap:15px;flex-wrap:wrap}    
-.footerlinks a{color:#ddd}    
-.sticky{position:fixed;bottom:0;left:0;width:100%;display:flex;box-shadow:0 -5px 20px rgba(0,0,0,.1)}    
-.sticky a{flex:1;text-align:center;padding:15px;font-weight:700}    
-@media(min-width:769px){.sticky{display:none}}    
-@media(max-width:768px){    
-.nav{flex-direction:column;gap:12px}    
-.hero-wrap,.founder{grid-template-columns:1fr}    
-}    
-</style>    
-</head>    
-<body>    
+/* General cards */
+.grid{display:grid;gap:22px}
+.cards3{grid-template-columns:repeat(3,1fr)}
+.cards4{grid-template-columns:repeat(4,1fr)}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:28px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.card p{margin-top:9px}
+.icon{
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:14px;
+  background:#fff8df;
+  color:#8c6b0b;
+  font-weight:900;
+  margin-bottom:18px;
+}
 
-<header>    
-<div class="container nav">    
-<div class="logo">Student Startup Studio</div>    
-<div class="navlinks">    
-<a href="index.html">Home</a>    
-<a href="services.html">Services</a>    
-<a href="about.html">About</a>    
-<a href="book.html" class="btn gold">Book Session</a>    
-</div>    
-</div>    
-</header>    
+/* Problem */
+.problem{background:var(--gray)}
+.section-head{max-width:760px;margin:0 auto 44px}
+.section-head p{margin-top:13px;font-size:1.05rem}
+.problem-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+.problem-box{
+  padding:32px;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.problem-box h3{margin-bottom:18px}
+.problem-box ul{
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+.problem-box li{color:#555}
+.problem-box li:before{margin-right:10px;font-weight:900}
+.before li:before{content:"×";color:#a33}
+.after li:before{content:"✓";color:#8c6b0b}
 
-<section class="hero">    
-<div class="container hero-wrap">    
-<div>    
-<h1>Turn Your Business Idea Into a Real Business</h1>    
-<p>Get expert startup guidance, a launch strategy, and the support you need to move from idea to customers.</p>    
-<div class="hero-actions">    
-<a href="book.html" class="btn gold">Book Startup Session</a>    
-<a href="services.html" class="btn outline">View Services</a>    
-</div>    
-<div class="trust">    
-<span>Startup Strategy</span><span>Website Development</span><span>Founder Coaching</span><span>Secure PayPal Payments</span>    
-</div>    
-</div>    
+/* Transformation */
+.transform-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+.transform{
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+.transform-head{
+  padding:14px 20px;
+  font-weight:900;
+  border-bottom:1px solid var(--line);
+}
+.transform img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  background:#eee;
+}
+.transform-caption{padding:18px 20px}
 
-<div class="mockup">    
-<img src="https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jqqst9rta621j56lpv7h4mu215.png" alt="Startup Strategy Visual">    
-</div>    
+/* Offer */
+.offer-section{background:#fafafa}
+.big-offer{
+  border:3px solid var(--gold);
+  border-radius:28px;
+  background:#fff;
+  padding:48px;
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:45px;
+  align-items:center;
+  box-shadow:var(--shadow);
+}
+.big-offer h2{margin:12px 0}
+.big-offer-price{font-size:3.3rem;font-weight:900;color:var(--gold-dark)}
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  list-style:none;
+  margin:24px 0;
+}
+.checks li:before{content:"✓";color:#8c6b0b;font-weight:900;margin-right:9px}
 
-</div>    
-</section>    
+/* Process */
+.steps{grid-template-columns:repeat(4,1fr)}
+.step{text-align:center}
+.stepnum{
+  width:58px;height:58px;
+  border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;
+  margin:0 auto 17px;
+  font-size:1.15rem;
+}
+.step p{font-size:.95rem}
 
-<section>    
-<div class="container center">    
-<h2>Built for Aspiring Entrepreneurs</h2>    
-<p style="color:#555;margin:10px auto 40px;max-width:700px">Whether you're a student, graduate, side hustler, or first-time founder, we help you launch with confidence.</p>    
-<div class="grid stats">    
-<div class="card stat"><h3>100+</h3><p>Ideas Reviewed</p></div>    
-<div class="card stat"><h3>50+</h3><p>Founders Guided</p></div>    
-<div class="card stat"><h3>25+</h3><p>Websites Launched</p></div>    
-</div>    
-</div>    
-</section>    
+/* Portfolio */
+.portfolio{background:var(--gray)}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.work{
+  border-radius:22px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.work img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  background:#eee;
+}
+.work-body{padding:20px}
+.work-body p{font-size:.92rem;margin-top:6px}
 
-<section style="background:#fafafa">    
-<div class="container">    
-<h2 class="center">Services</h2><br>    
-<div class="grid cards4">    
-<div class="card"><h3>Business Idea Validation</h3><p>Test and refine your business concept.</p></div>    
-<div class="card"><h3>Startup Strategy</h3><p>Create a launch plan that works.</p></div>    
-<div class="card"><h3>Website Development</h3><p>Professional website setup.</p></div>    
-<div class="card"><h3>Founder Coaching</h3><p>Accountability and growth support.</p></div>    
-</div>    
-<p class="center" style="margin-top:30px"><a href="services.html" class="btn gold">View All Services</a></p>    
-</div>    
-</section>    
+/* Audience */
+.audience-grid{grid-template-columns:repeat(3,1fr)}
+.audience-card{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  font-weight:800;
+  background:#fff;
+}
 
-<section>    
-<div class="container center">    
-<h2>How It Works</h2><br>    
-<div class="grid steps">    
-<div class="card"><div class="stepnum">1</div><h3>Book Consultation</h3></div>    
-<div class="card"><div class="stepnum">2</div><h3>Build Strategy</h3></div>    
-<div class="card"><div class="stepnum">3</div><h3>Launch Business</h3></div>    
-<div class="card"><div class="stepnum">4</div><h3>Grow Revenue</h3></div>    
-</div>    
-</div>    
-</section>    
+/* Founder */
+.founder{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:50px;
+  align-items:center;
+}
+.photo{
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.founder p{margin-top:16px}
+.founder-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 
-<section style="background:#fafafa">    
-<div class="container">    
-<div class="card package center">    
-<h2>Most Popular Package</h2>    
-<h3 style="margin-top:10px">Startup Launch Blueprint</h3>    
-<div style="font-size:3rem;color:#d4af37;font-weight:800">R3,000</div>    
-<p>Strategy Consultation • Pricing Strategy • Competitor Analysis • Customer Acquisition Plan • 30-Day Launch Roadmap</p>    
-<p style="margin-top:25px"><a href="book.html" class="btn gold">Get My Blueprint</a></p>    
-</div>    
-</div>    
-</section>    
+/* FAQ */
+.faq{background:var(--gray)}
+.faq-list{max-width:850px;margin:auto;display:grid;gap:12px}
+details{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 22px;
+}
+summary{cursor:pointer;font-weight:850}
+details p{padding-top:12px}
 
-<section>    
-<div class="container founder">    
+/* Final CTA */
+.final-cta{
+  padding:0 0 90px;
+}
+.dark{
+  background:#111;
+  color:#fff;
+  border-radius:30px;
+  padding:70px 30px;
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+}
+.dark:before,.dark:after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:50%;
+}
+.dark:before{width:300px;height:300px;left:-180px;top:-170px}
+.dark:after{width:260px;height:260px;right:-150px;bottom:-160px}
+.dark h2,.dark p,.dark .btn{position:relative}
+.dark p{max-width:680px;margin:15px auto 28px;color:#cfcfcf}
 
-<div class="photo">    
-<img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jjume32e1ns3ael10lkpd4106p15.jpeg" alt="Founder Pericles">    
-</div>    
+/* Audit form */
+.audit{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:38px;
+  box-shadow:var(--shadow);
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group.full{grid-column:1/-1}
+label{font-weight:800;font-size:.9rem}
+input,select,textarea{
+  width:100%;
+  border:1px solid #dcdcdc;
+  border-radius:12px;
+  padding:13px 14px;
+  font:inherit;
+  outline:none;
+  background:#fff;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+.form-note{font-size:.82rem;margin-top:10px}
 
-<div>    
-<h2>Meet Pericles</h2>    
-<p>Founder of Student Startup Studio and Zep Swipe. Helping entrepreneurs transform ideas into real businesses through strategy, execution, and digital presence.</p>    
-<div style="margin-top:20px;display:flex;gap:15px;flex-wrap:wrap">    
-<a href="about.html" class="btn outline">About Pericles</a>    
-<a href="book.html" class="btn gold">Book Session</a>    
-</div>    
-</div>    
+/* Footer */
+footer{background:#111;color:#fff;padding:45px 0}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:35px;
+}
+footer p{color:#bbb;margin-top:8px}
+.footerlinks{display:grid;gap:8px}
+.footerlinks a{color:#ddd}
+.footer-bottom{
+  margin-top:35px;
+  padding-top:20px;
+  border-top:1px solid #333;
+  color:#aaa;
+  font-size:.85rem;
+}
 
-</div>    
-</section>    
+/* Mobile CTA */
+.sticky{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:none;
+  z-index:2000;
+  box-shadow:0 -5px 20px rgba(0,0,0,.15);
+}
+.sticky a{
+  flex:1;
+  text-align:center;
+  padding:14px 8px;
+  font-weight:900;
+  font-size:.9rem;
+}
 
-<section style="background:#fafafa">    
-<div class="container center">    
-<h2>Who We Help</h2><br>    
-<div class="grid cards4">    
-<div class="card">Students</div>    
-<div class="card">Graduates</div>    
-<div class="card">Side Hustlers</div>    
-<div class="card">First-Time Founders</div>    
-<div class="card">Freelancers</div>    
-<div class="card">Small Business Owners</div>    
-</div>    
-</div>    
-</section>    
+/* Responsive */
+@media(max-width:980px){
+  .hero-wrap,.big-offer,.founder{grid-template-columns:1fr}
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .cards3,.portfolio-grid,.audience-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  section{padding:65px 0}
+  .nav{min-height:68px}
+  .navlinks a:not(.btn){display:none}
+  .mobile-menu{display:block}
+  .hero{padding-top:48px}
+  .hero-wrap{gap:35px}
+  .offer-card{padding:28px}
+  .problem-grid,.transform-wrap,.form-grid{grid-template-columns:1fr}
+  .cards4,.cards3,.portfolio-grid,.audience-grid,.steps{grid-template-columns:1fr}
+  .big-offer{padding:30px}
+  .checks{grid-template-columns:1fr}
+  .founder{gap:28px}
+  .footer-grid{grid-template-columns:1fr}
+  .audit{padding:24px}
+  .sticky{display:flex}
+  body{padding-bottom:58px}
+}
+</style>
+</head>
 
-<section>    
-<div class="container">    
-<div class="dark">    
-<h2 style="font-size:clamp(2rem,4vw,3.5rem)">Your Business Won't Launch Itself</h2>    
-<p style="max-width:700px;margin:15px auto 25px">Every successful company started with one decision. Take the first step today.</p>    
-<a href="book.html" class="btn gold">Book My Startup Session</a>    
-</div>    
-</div>    
-</section>    
+<body>
 
-<footer>    
-<div class="container">    
-<h3>Student Startup Studio</h3>    
-<p>Helping entrepreneurs launch with confidence.</p>    
-<div class="footerlinks" style="margin-top:15px">    
-<a href="index.html">Home</a>    
-<a href="services.html">Services</a>    
-<a href="about.html">About</a>    
-<a href="book.html">Book Session</a>    
-<a href="https://wa.me/27842946281">WhatsApp</a>    
-</div>    
-</div>    
-</footer>    
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Student Startup <span>Studio</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#audit" class="btn gold btn-small">Get Free Audit</a>
+    </nav>
+    <div class="mobile-menu">Menu</div>
+  </div>
+</header>
 
-<div class="sticky">    
-<a href="book.html" style="background:#d4af37;color:#111">Book Session</a>    
-<a href="https://wa.me/27842946281" style="background:#111;color:#fff">WhatsApp</a>    
-</div>    
+<main>
 
-</body>    
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-wrap">
+    <div>
+      <span class="eyebrow">Websites • Strategy • Growth</span>
+      <h1>Your Business Deserves a Website That <strong>Works as Hard as You Do.</strong></h1>
+      <p class="hero-copy">
+        We transform outdated, underperforming business websites into modern,
+        professional digital experiences designed to build trust and generate enquiries.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#audit" class="btn gold">Get My Free Website Audit →</a>
+        <a href="#website-upgrade" class="btn outline">View $1,500 Upgrade</a>
+      </div>
+
+      <div class="micro-proof">
+        <span>✓ Mobile-first</span>
+        <span>✓ Conversion-focused</span>
+        <span>✓ Remote worldwide</span>
+        <span>✓ Strategy included</span>
+      </div>
+    </div>
+
+    <aside class="offer-card" id="website-upgrade">
+      <div class="offer-top">
+        <span class="badge">Website Growth Upgrade</span>
+        <span style="color:#aaa;font-size:.82rem">Premium Service</span>
+      </div>
+      <h2>Turn Your Website Into a Better Customer Experience.</h2>
+      <p style="color:#bbb">
+        A strategic redesign for businesses ready to look more professional,
+        communicate their value clearly and make it easier for customers to take action.
+      </p>
+
+      <div style="margin-top:25px">
+        <div class="price">$1,500 <small>starting</small></div>
+      </div>
+
+      <ul class="offer-list">
+        <li>Modern website redesign</li>
+        <li>Mobile-first experience</li>
+        <li>Clear customer journey & CTAs</li>
+        <li>Professional business presentation</li>
+        <li>Launch-ready implementation</li>
+      </ul>
+
+      <a href="#audit" class="btn gold">Request My Upgrade →</a>
+      <div class="offer-note">Get a free audit first. No obligation.</div>
+    </aside>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div class="container proof-items">
+    <span>Business websites</span>
+    <span>Startup strategy</span>
+    <span>Customer acquisition</span>
+    <span>Remote delivery</span>
+    <span>International clients welcome</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Your website matters</span>
+      <h2 style="margin-top:15px">Is Your Website Costing You Customers?</h2>
+      <p>
+        Your website is often the first salesperson your customer meets.
+        If it looks outdated or makes visitors work too hard, opportunities can disappear.
+      </p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-box before">
+        <h3>Signs Your Website Needs an Upgrade</h3>
+        <ul>
+          <li>It looks outdated compared with your competitors.</li>
+          <li>It doesn't work well on mobile devices.</li>
+          <li>Visitors don't know what to do next.</li>
+          <li>Your services or value aren't immediately clear.</li>
+          <li>People have to search for how to contact you.</li>
+        </ul>
+      </div>
+
+      <div class="problem-box after">
+        <h3>What We Help You Create</h3>
+        <ul>
+          <li>A modern, professional first impression.</li>
+          <li>A clear path from visitor to enquiry.</li>
+          <li>Strong calls-to-action throughout the site.</li>
+          <li>A cleaner mobile customer experience.</li>
+          <li>A website that communicates your business clearly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">The transformation</span>
+      <h2 style="margin-top:15px">From Outdated to Customer-Ready.</h2>
+      <p>
+        Don't just have a website. Build a digital presence that makes your business
+        easier to understand, trust and contact.
+      </p>
+    </div>
+
+    <div class="transform-wrap">
+      <div class="transform">
+        <div class="transform-head">BEFORE — The problem</div>
+        <img src="https://placehold.co/1000x625/f0f0f0/555?text=Your+Current+Website" alt="Example current website placeholder">
+        <div class="transform-caption">
+          <strong>Outdated presentation, unclear messaging and weak customer journey.</strong>
+        </div>
+      </div>
+
+      <div class="transform">
+        <div class="transform-head">AFTER — The upgrade</div>
+        <img src="https://placehold.co/1000x625/111111/d4af37?text=Modern+Customer-Ready+Website" alt="Example upgraded website placeholder">
+        <div class="transform-caption">
+          <strong>Modern design, clear messaging, mobile-first experience and stronger calls-to-action.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer-section" id="services">
+  <div class="container">
+    <div class="big-offer" >
+      <div>
+        <span class="eyebrow">Most requested</span>
+        <h2>Website Growth Upgrade</h2>
+        <p>
+          For businesses that already have a website but know it could look,
+          communicate and convert much better.
+        </p>
+
+        <ul class="checks">
+          <li>Strategic redesign</li>
+          <li>Mobile optimization</li>
+          <li>Clear CTAs</li>
+          <li>Improved structure</li>
+          <li>Professional presentation</li>
+          <li>Launch support</li>
+        </ul>
+
+        <a href="#audit" class="btn gold">Start With My Free Audit →</a>
+      </div>
+
+      <div class="center">
+        <div style="font-weight:800;color:#555">Investment</div>
+        <div class="big-offer-price">$1,500</div>
+        <p>Starting price for the website growth upgrade.</p>
+        <p style="font-size:.85rem;margin-top:15px">
+          Final scope and price are confirmed after reviewing your existing website.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Simple process</span>
+      <h2 style="margin-top:15px">From Audit to Upgrade.</h2>
+      <p>No complicated process. We identify the problems, plan the improvements and build the upgrade.</p>
+    </div>
+
+    <div class="grid steps">
+      <div class="card step">
+        <div class="stepnum">1</div>
+        <h3>Website Audit</h3>
+        <p>We review your current website and identify the biggest opportunities.</p>
+      </div>
+      <div class="card step">
+        <div class="stepnum">2</div>
+        <h3>Upgrade Plan</h3>
+        <p>We map the structure, messaging and customer journey your website needs.</p>
+      </div>
+      <div class="card step">
+        <div class="stepnum">3</div>
+        <h3>Design & Build</h3>
+        <p>We transform the experience into a cleaner, more professional website.</p>
+      </div>
+      <div class="card step">
+        <div class="stepnum">4</div>
+        <h3>Launch</h3>
+        <p>Your upgraded website is prepared for customers and future growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section style="background:#fafafa">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">More than websites</span>
+      <h2 style="margin-top:15px">Build. Launch. Grow.</h2>
+      <p>
+        Student Startup Studio combines digital execution with practical business strategy.
+      </p>
+    </div>
+
+    <div class="grid cards4">
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>Website Design & Upgrades</h3>
+        <p>Modern websites and strategic upgrades for businesses ready to improve their online presence.</p>
+      </div>
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Business Strategy</h3>
+        <p>Turn ideas and opportunities into clearer offers, positioning and action plans.</p>
+      </div>
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Pricing & Offers</h3>
+        <p>Build offers and pricing that make your value easier for customers to understand.</p>
+      </div>
+      <div class="card">
+        <div class="icon">04</div>
+        <h3>Customer Acquisition</h3>
+        <p>Create practical strategies for reaching prospects and getting your first or next customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work" class="portfolio">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Our work</span>
+      <h2 style="margin-top:15px">Show People What You Can Build.</h2>
+      <p>
+        Replace these placeholders with real screenshots of your strongest website projects.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="work">
+        <img src="https://placehold.co/1000x625/eeeeee/555?text=Project+01" alt="Project 01 placeholder">
+        <div class="work-body">
+          <h3>Business Website</h3>
+          <p>Modernized digital presence and customer journey.</p>
+        </div>
+      </article>
+      <article class="work">
+        <img src="https://placehold.co/1000x625/eeeeee/555?text=Project+02" alt="Project 02 placeholder">
+        <div class="work-body">
+          <h3>Startup Website</h3>
+          <p>Clear positioning, offer structure and conversion path.</p>
+        </div>
+      </article>
+      <article class="work">
+        <img src="https://placehold.co/1000x625/eeeeee/555?text=Project+03" alt="Project 03 placeholder">
+        <div class="work-body">
+          <h3>Service Business</h3>
+          <p>Mobile-first presentation with stronger calls-to-action.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Who we help</span>
+      <h2 style="margin-top:15px">For Businesses Ready to Move.</h2>
+      <p>Whether you're launching or already serving customers, we help you turn your next idea into action.</p>
+    </div>
+
+    <div class="grid audience-grid">
+      <div class="audience-card">Small Businesses</div>
+      <div class="audience-card">Startups</div>
+      <div class="audience-card">Entrepreneurs</div>
+      <div class="audience-card">Service Businesses</div>
+      <div class="audience-card">Growing Brands</div>
+      <div class="audience-card">First-Time Founders</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="about" style="background:#fafafa">
+  <div class="container founder">
+    <div class="photo">
+      <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jjume32e1ns3ael10lkpd4106p15.jpeg" alt="Pericles, Founder of Student Startup Studio">
+    </div>
+
+    <div>
+      <span class="eyebrow">Founder-led studio</span>
+      <h2 style="margin-top:15px">Built by a Founder Who Understands the Journey.</h2>
+      <p>
+        I'm Pericles, founder of Student Startup Studio and Zep Swipe.
+        I help entrepreneurs turn ideas into clearer businesses through strategy,
+        execution and digital presence.
+      </p>
+      <p>
+        Whether you need a stronger website, a clearer offer or a practical launch plan,
+        the goal is simple: move from confusion to action.
+      </p>
+
+      <div class="founder-actions">
+        <a href="#audit" class="btn gold">Get My Free Audit</a>
+        <a href="about.html" class="btn outline">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT -->
+<section id="audit">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Start here — free</span>
+      <h2 style="margin-top:15px">Get Your Free Website Audit.</h2>
+      <p>
+        Tell us about your business and website. We'll review the opportunity
+        and identify practical improvements you can make.
+      </p>
+    </div>
+
+    <form class="audit" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      <input type="hidden" name="_subject" value="New Student Startup Studio Website Audit Request">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="thank-you.html">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="business">Business name</label>
+          <input id="business" name="business" type="text" placeholder="Business name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@business.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Business location</label>
+          <input id="location" name="location" type="text" placeholder="City, Country">
+        </div>
+
+        <div class="form-group full">
+          <label for="website">Current website URL</label>
+          <input id="website" name="website" type="url" placeholder="https://yourwebsite.com" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="problem">What would you most like to improve?</label>
+          <select id="problem" name="problem">
+            <option value="">Select one</option>
+            <option>My website looks outdated</option>
+            <option>My website is not generating enough enquiries</option>
+            <option>I need a complete redesign</option>
+            <option>I need a new website</option>
+            <option>I want a more professional online presence</option>
+            <option>I'm not sure — I want your recommendation</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Tell us anything else</label>
+          <textarea id="message" name="message" placeholder="What are you hoping your website will help your business achieve?"></textarea>
+        </div>
+
+        <div class="form-group full">
+          <button class="btn gold" type="submit">Request My Free Website Audit →</button>
+          <p class="form-note">No obligation. We'll review your website before discussing any paid work.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2 style="margin-top:15px">Before You Get Started.</h2>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary>Do you work with businesses outside South Africa?</summary>
+        <p>Yes. Student Startup Studio can work remotely with businesses internationally. The website audit and project scope are handled online.</p>
+      </details>
+
+      <details>
+        <summary>What does the $1,500 website upgrade include?</summary>
+        <p>The starting package focuses on improving the website's design, structure, mobile experience, messaging and customer journey. Final scope is confirmed after reviewing your existing website.</p>
+      </details>
+
+      <details>
+        <summary>Do I need a completely new website?</summary>
+        <p>Not necessarily. If your current website can be improved, we can focus on upgrading it rather than rebuilding everything from scratch.</p>
+      </details>
+
+      <details>
+        <summary>How long does a project take?</summary>
+        <p>Timeline depends on the scope, content and feedback process. We confirm the delivery timeline before work begins rather than making a one-size-fits-all promise.</p>
+      </details>
+
+      <details>
+        <summary>Can you help with more than my website?</summary>
+        <p>Yes. Student Startup Studio also supports business strategy, pricing, offers, launch planning and customer acquisition.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="dark">
+      <h2>Your Customers Are Already Searching.</h2>
+      <p>
+        Make sure they like what they find. Start with a free website audit
+        and discover the biggest opportunities to improve your online presence.
+      </p>
+      <a href="#audit" class="btn gold">Get My Free Website Audit →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Student Startup Studio</h3>
+        <p>Build. Launch. Grow.</p>
+        <p>Websites, business strategy and customer acquisition for entrepreneurs and growing businesses.</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <div class="footerlinks" style="margin-top:12px">
+          <a href="#services">Services</a>
+          <a href="#work">Our Work</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Get Started</h3>
+        <div class="footerlinks" style="margin-top:12px">
+          <a href="#audit">Free Website Audit</a>
+          <a href="book.html">Book Consultation</a>
+          <a href="https://wa.me/27842946281" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Student Startup Studio. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="#audit" style="background:#d4af37;color:#111">Free Website Audit</a>
+  <a href="https://wa.me/27842946281" target="_blank" rel="noopener" style="background:#111;color:#fff">WhatsApp</a>
+</div>
+
+</body>
 </html>
